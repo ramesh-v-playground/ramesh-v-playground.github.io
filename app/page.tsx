@@ -382,6 +382,12 @@ export default function Home() {
               Autonomous agents, multi-agent workflows, tool-using LLMs, grounded RAG — the
               architecture work that turns enterprise AI ambitions into production systems.
             </p>
+            <a
+              href="mailto:rameshkumar.venkatachalam@gmail.com"
+              className="inline-block font-serif text-2xl sm:text-3xl text-coral hover:underline transition"
+            >
+              rameshkumar.venkatachalam@gmail.com
+            </a>
           </div>
         </div>
       </section>

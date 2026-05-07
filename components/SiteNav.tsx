@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { href: '/#stack', label: 'Stack' },
   { href: '/#cricket', label: 'Cricket' },
   { href: '/#blog', label: 'Writing' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export function SiteNav() {
