@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build (next build with output: 'export')
+      - name: "Build (next build with output: 'export')"
         run: npm run build
 
       - name: Add .nojekyll
