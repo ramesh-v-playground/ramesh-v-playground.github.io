@@ -67,9 +67,6 @@ export default function PlaygroundPage() {
             <li><Link href="/playground" className="text-coral-text font-semibold transition">Playground</Link></li>
             <li><Link href="/#blog" className="text-soft hover:text-coral-text transition">Writing</Link></li>
           </ul>
-          <Link href="/#contact" className="bg-ink text-cream px-5 py-2 rounded-full text-sm font-medium hover:-translate-y-px transition">
-            Say hi →
-          </Link>
         </div>
       </nav>
 
@@ -167,9 +164,6 @@ export default function PlaygroundPage() {
               Each PoC here points at the kind of work I do for enterprise clients.
               If one looks close to what you're solving, let's talk.
             </p>
-            <Link href="/#contact" className="bg-coral text-white px-8 py-4 rounded-full font-semibold inline-block hover:-translate-y-0.5 transition">
-              Start a conversation →
-            </Link>
           </div>
         </div>
       </section>

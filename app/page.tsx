@@ -16,9 +16,6 @@ export default function Home() {
             <li><a href="#cricket" className="text-soft hover:text-coral-text transition">Cricket</a></li>
             <li><a href="#blog" className="text-soft hover:text-coral-text transition">Writing</a></li>
           </ul>
-          <a href="#contact" className="bg-ink text-cream px-5 py-2 rounded-full text-sm font-medium hover:-translate-y-px transition">
-            Say hi →
-          </a>
         </div>
       </nav>
 
@@ -382,9 +379,6 @@ export default function Home() {
               Autonomous agents, multi-agent workflows, tool-using LLMs, grounded RAG — the
               architecture work that turns enterprise AI ambitions into production systems.
             </p>
-            <a href="mailto:hello@example.com" className="bg-coral text-white px-8 py-4 rounded-full font-semibold inline-block hover:-translate-y-0.5 transition">
-              Start a conversation →
-            </a>
           </div>
         </div>
       </section>
