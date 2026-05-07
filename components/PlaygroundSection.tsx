@@ -43,11 +43,6 @@ export function PlaygroundSection() {
     return PROJECTS.filter((p) => p.tags.includes(activeFilter as Tag));
   }, [activeFilter]);
 
-  const buildLog = useMemo(
-    () => [...PROJECTS].sort((a, b) => (a.shippedAt < b.shippedAt ? 1 : -1)).slice(0, 5),
-    []
-  );
-
   const filterChips: { id: typeof activeFilter; label: string }[] = [
     { id: 'all', label: 'All' },
     ...ALL_TAGS.map((t) => ({ id: t, label: TAG_LABEL[t] })),
@@ -92,38 +87,12 @@ export function PlaygroundSection() {
             <p>Try a different filter — or check back soon.</p>
           </div>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {filtered.map((p) => (
               <ProjectCard key={p.slug} project={p} />
             ))}
           </div>
         )}
-
-        {/* Build log */}
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">Build log</p>
-            <h3 className="font-serif text-3xl sm:text-4xl">Recently <em className="text-coral italic">shipped</em></h3>
-          </div>
-          <div className="space-y-2">
-            {buildLog.map((p) => (
-              <div key={p.slug} className="flex gap-4 items-baseline bg-white rounded-2xl p-5 shadow-[0_2px_20px_rgba(0,0,0,0.03)]">
-                <div className="text-xs uppercase tracking-widest text-soft w-24 flex-shrink-0">
-                  {formatDate(p.shippedAt)}
-                </div>
-                <div className="flex-1">
-                  <span className="font-serif text-lg">{p.name}</span>
-                  <span className={`ml-3 inline-block text-xs px-2 py-0.5 rounded-full ${STATUS_STYLES[p.status]}`}>
-                    {STATUS_LABEL[p.status]}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-soft text-sm mt-8">
-            Updated as I ship — no fixed cadence, no fake "weekly" promises.
-          </p>
-        </div>
       </div>
     </section>
   );

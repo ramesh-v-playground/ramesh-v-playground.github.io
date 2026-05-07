@@ -199,14 +199,18 @@ export default function Home() {
 
       {/* Stack */}
       <section id="stack" className="px-4 sm:px-8 py-20">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">The stack</p>
             <h2 className="font-serif text-4xl sm:text-5xl mb-4">
               Tools I <em className="text-coral">reach for</em>
             </h2>
+            <p className="text-soft max-w-2xl mx-auto">
+              Twenty years of picking tools, then unpicking them. These are the ones I keep coming
+              back to — across architecture, AI, and the domains where they collide.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
                 heading: '🔧 Core Stack',
@@ -214,15 +218,23 @@ export default function Home() {
               },
               {
                 heading: '🤖 AI / ML',
-                items: ['Agentic AI', 'Multi-Agent Systems', 'RAG', 'Vertex AI Search', 'LLM Integration', 'Prompt Engineering'],
+                items: ['Agentic AI', 'Multi-Agent Systems', 'RAG', 'Vertex AI Search', 'LLM Integration', 'Prompt Engineering', 'Claude Managed Agents', 'Google ADK'],
+              },
+              {
+                heading: '☁️ Infrastructure',
+                items: ['Cloud-Native Architecture', 'IaC', 'CI/CD', 'Workload Identity', 'Secrets Management', 'Zero Trust', 'GKE', 'Cloud Run'],
+              },
+              {
+                heading: '💻 Languages',
+                items: ['Java', 'TypeScript', 'Python', 'SQL', 'Go', 'Bash', 'YAML', 'HCL'],
+              },
+              {
+                heading: '🎨 Frontend',
+                items: ['Next.js', 'React', 'Tailwind CSS', 'Module Federation', 'Micro Frontends', 'Server Components', 'MDX'],
               },
               {
                 heading: '🏥 Domain',
                 items: ['Health Insurance', 'Telecom', 'Supply Chain', 'Networking', 'HealthTech', 'Enterprise Platforms'],
-              },
-              {
-                heading: '☁️ Infrastructure',
-                items: ['Cloud-Native Architecture', 'IaC', 'CI/CD', 'Workload Identity', 'Secrets Management', 'Zero Trust'],
               },
             ].map((group) => (
               <div key={group.heading} className="bg-white rounded-3xl p-7 shadow-[0_2px_20px_rgba(0,0,0,0.04)]">
@@ -236,6 +248,34 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* How I think about it */}
+          <div className="grid md:grid-cols-3 gap-5 mt-10">
+            <div className="bg-peach/40 rounded-3xl p-7">
+              <div className="text-3xl mb-3">🎯</div>
+              <h3 className="font-serif text-xl mb-2">Boring where it counts</h3>
+              <p className="text-soft text-[15px] leading-relaxed">
+                Postgres, S3, Terraform, Spring Boot. Production foundations should be the most
+                proven part of the stack — leave the novelty for the leaves of the tree.
+              </p>
+            </div>
+            <div className="bg-sage/30 rounded-3xl p-7">
+              <div className="text-3xl mb-3">🧪</div>
+              <h3 className="font-serif text-xl mb-2">Sharp at the edge</h3>
+              <p className="text-soft text-[15px] leading-relaxed">
+                Agent frameworks, evaluation tooling, vector stores — that's where I spend
+                experimentation budget. The interface to enterprise should hide it.
+              </p>
+            </div>
+            <div className="bg-plum/15 rounded-3xl p-7">
+              <div className="text-3xl mb-3">🔭</div>
+              <h3 className="font-serif text-xl mb-2">Currently exploring</h3>
+              <p className="text-soft text-[15px] leading-relaxed">
+                Claude Managed Agents in production, A2A patterns across ADK and other
+                frameworks, and GCP Workload Identity Federation at multi-team scale.
+              </p>
+            </div>
           </div>
         </div>
       </section>
