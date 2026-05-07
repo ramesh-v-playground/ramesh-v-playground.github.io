@@ -2,13 +2,24 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Ramesh Venkatachalam — Solutions Architect',
+  metadataBase: new URL('https://ramesh-v-playground.github.io'),
+  title: 'Ramesh Venkatachalam — Lead Solutions Architect',
   description:
-    'Solutions Architect with 20+ years across telecom, supply chain, insurance, and healthtech. GCP, Terraform, agentic AI. Based in Dallas, TX.',
+    'Lead Solutions Architect with 20+ years across telecom, supply chain, insurance, and healthtech. GCP, Terraform, agentic AI. Based in Dallas, TX.',
   openGraph: {
-    title: 'Ramesh Venkatachalam — Solutions Architect',
-    description: 'Cloud, agentic AI, and the architecture work that turns enterprise AI ambitions into production systems.',
+    title: 'Ramesh Venkatachalam — Lead Solutions Architect',
+    description:
+      'Cloud, agentic AI, and the architecture work that turns enterprise AI ambitions into production systems.',
+    url: 'https://ramesh-v-playground.github.io',
+    siteName: 'Ramesh Venkatachalam',
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ramesh Venkatachalam — Lead Solutions Architect',
+    description:
+      'Cloud, agentic AI, and the architecture work that turns enterprise AI ambitions into production systems.',
   },
 };
 
