@@ -1,24 +1,12 @@
 import Link from 'next/link';
-import { AnimatedName } from '@/components/AnimatedName';
 import { PlaygroundSection } from '@/components/PlaygroundSection';
+import { SiteNav } from '@/components/SiteNav';
+import { POSTS, formatPostDate } from '@/lib/posts';
 
 export default function Home() {
   return (
     <>
-      {/* Nav */}
-      <nav className="sticky top-4 z-50 px-4 sm:px-8 pt-6">
-        <div className="max-w-6xl mx-auto bg-white/70 backdrop-blur-md rounded-full px-6 py-3 flex justify-between items-center shadow-[0_4px_30px_rgba(0,0,0,0.06)]">
-          <AnimatedName />
-          <ul className="hidden md:flex gap-8 text-sm font-medium">
-            <li><a href="#about" className="text-soft hover:text-coral-text transition">About</a></li>
-            <li><a href="#playground" className="text-soft hover:text-coral-text transition">Playground</a></li>
-            <li><a href="#work" className="text-soft hover:text-coral-text transition">Work</a></li>
-            <li><a href="#stack" className="text-soft hover:text-coral-text transition">Stack</a></li>
-            <li><a href="#cricket" className="text-soft hover:text-coral-text transition">Cricket</a></li>
-            <li><a href="#blog" className="text-soft hover:text-coral-text transition">Writing</a></li>
-          </ul>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* Hero */}
       <section className="px-4 sm:px-8 pt-16 pb-24 text-center">
@@ -351,31 +339,32 @@ export default function Home() {
             <h2 className="font-serif text-4xl sm:text-5xl mb-4">
               Thinking out <em className="text-coral">loud</em>
             </h2>
-            <p className="text-soft">Field notes on Google ADK, GCP architecture, and what enterprise agentic AI actually needs.</p>
+            <p className="text-soft">
+              Quick takes on Google Cloud Data Cloud product news — what each release means
+              for enterprise architects.
+            </p>
           </div>
           <div className="space-y-3">
-            {[
-              { day: '02', mon: 'May', title: 'ADK in production: what changes when you ship a multi-agent system', desc: 'Notes from running Google\'s Agent Development Kit beyond the tutorial — context management, A2A patterns, and the things the docs don\'t warn you about.' },
-              { day: '24', mon: 'Apr', title: 'ADK vs LangGraph vs CrewAI: choosing an agent framework in 2026', desc: 'A practitioner\'s comparison across deployment targets, multi-agent patterns, evaluation tooling, and the real cost of switching frameworks later.' },
-              { day: '11', mon: 'Apr', title: 'Vertex AI Agent Engine, Cloud Run, or GKE — where should your ADK agent actually run?', desc: 'Three deployment targets, three different operational profiles. A GCP architect\'s decision tree for picking the right runtime.' },
-              { day: '28', mon: 'Mar', title: 'Workload Identity Federation, in plain English', desc: 'Why long-lived service-account keys are the wrong default — and the GCP pattern that replaces them.' },
-              { day: '14', mon: 'Mar', title: 'Grounding ADK agents on Vertex AI Search', desc: 'A walkthrough of the agentic_rag template, what to chunk, what to filter, and why citations are a first-class output.' },
-              { day: '02', mon: 'Mar', title: 'A2A: agent-to-agent communication, demystified', desc: 'The protocol that lets ADK agents call agents on other frameworks. What it solves, what it doesn\'t, and where it fits in an enterprise stack.' },
-              { day: '18', mon: 'Feb', title: 'The agentic moat for enterprise architects', desc: 'Why deep domain knowledge plus agent orchestration is the most defensible position in 2026.' },
-              { day: '03', mon: 'Feb', title: 'What an enterprise actually needs from RAG', desc: 'Lessons from grounding a search system in twenty years of insurance documentation.' },
-            ].map((post) => (
-              <Link key={post.title} href="#" className="bg-white rounded-2xl p-7 flex gap-6 items-center hover:translate-x-2 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition shadow-[0_2px_20px_rgba(0,0,0,0.03)]">
-                <div className="text-center w-14 flex-shrink-0">
-                  <div className="font-serif text-3xl text-coral leading-none">{post.day}</div>
-                  <div className="text-xs uppercase tracking-widest text-soft mt-1">{post.mon}</div>
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-serif text-xl mb-1">{post.title}</h4>
-                  <p className="text-soft text-sm">{post.desc}</p>
-                </div>
-                <div className="text-coral-text text-2xl">→</div>
-              </Link>
-            ))}
+            {POSTS.map((post) => {
+              const { day, mon } = formatPostDate(post.date);
+              return (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="bg-white rounded-2xl p-7 flex gap-6 items-center hover:translate-x-2 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition shadow-[0_2px_20px_rgba(0,0,0,0.03)]"
+                >
+                  <div className="text-center w-14 flex-shrink-0">
+                    <div className="font-serif text-3xl text-coral leading-none">{day}</div>
+                    <div className="text-xs uppercase tracking-widest text-soft mt-1">{mon}</div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-serif text-xl mb-1">{post.title}</h4>
+                    <p className="text-soft text-sm">{post.excerpt}</p>
+                  </div>
+                  <div className="text-coral-text text-2xl">→</div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
