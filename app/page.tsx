@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AnimatedName } from '@/components/AnimatedName';
+import { PlaygroundSection } from '@/components/PlaygroundSection';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
           <AnimatedName />
           <ul className="hidden md:flex gap-8 text-sm font-medium">
             <li><a href="#about" className="text-soft hover:text-coral-text transition">About</a></li>
-            <li><Link href="/playground" className="text-soft hover:text-coral-text transition">Playground</Link></li>
+            <li><a href="#playground" className="text-soft hover:text-coral-text transition">Playground</a></li>
             <li><a href="#work" className="text-soft hover:text-coral-text transition">Work</a></li>
             <li><a href="#stack" className="text-soft hover:text-coral-text transition">Stack</a></li>
             <li><a href="#cricket" className="text-soft hover:text-coral-text transition">Cricket</a></li>
@@ -37,9 +38,9 @@ export default function Home() {
             agentic AI — turning complex architectural problems into elegant, scalable systems.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/playground" className="bg-ink text-cream px-8 py-4 rounded-full font-semibold hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(42,42,58,0.3)] transition">
+            <a href="#playground" className="bg-ink text-cream px-8 py-4 rounded-full font-semibold hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(42,42,58,0.3)] transition">
               See the playground →
-            </Link>
+            </a>
           </div>
           {/* Stat strip */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16 max-w-3xl mx-auto">
@@ -139,6 +140,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Playground */}
+      <PlaygroundSection />
 
       {/* Current work */}
       <section id="work" className="px-4 sm:px-8 py-20">
