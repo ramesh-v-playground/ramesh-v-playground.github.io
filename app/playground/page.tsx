@@ -65,6 +65,9 @@ export default function PlaygroundPage() {
           <ul className="hidden md:flex gap-8 text-sm font-medium">
             <li><Link href="/#about" className="text-soft hover:text-coral-text transition">About</Link></li>
             <li><Link href="/playground" className="text-coral-text font-semibold transition">Playground</Link></li>
+            <li><Link href="/#work" className="text-soft hover:text-coral-text transition">Work</Link></li>
+            <li><Link href="/#stack" className="text-soft hover:text-coral-text transition">Stack</Link></li>
+            <li><Link href="/#cricket" className="text-soft hover:text-coral-text transition">Cricket</Link></li>
             <li><Link href="/#blog" className="text-soft hover:text-coral-text transition">Writing</Link></li>
           </ul>
         </div>

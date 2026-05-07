@@ -40,9 +40,6 @@ export default function Home() {
             <Link href="/playground" className="bg-ink text-cream px-8 py-4 rounded-full font-semibold hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(42,42,58,0.3)] transition">
               See the playground →
             </Link>
-            <a href="#contact" className="bg-white text-ink px-8 py-4 rounded-full font-semibold shadow-[0_2px_20px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 transition">
-              Let's chat ☕
-            </a>
           </div>
           {/* Stat strip */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16 max-w-3xl mx-auto">
