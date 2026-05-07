@@ -21,7 +21,7 @@ export default function Home() {
             <span className="squiggle">agentic</span> enterprise.
           </h1>
           <p className="text-lg sm:text-xl text-soft max-w-3xl mx-auto mb-10 leading-relaxed">
-            Enterprise solutions architect with 20+ years across telecom, supply chain, insurance,
+            Lead solutions architect with 20+ years across telecom, supply chain, insurance,
             and healthtech. I sit at the intersection of GCP, full-stack engineering, and
             agentic AI — turning complex architectural problems into elegant, scalable systems.
           </p>
