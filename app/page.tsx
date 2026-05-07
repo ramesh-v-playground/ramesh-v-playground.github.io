@@ -250,33 +250,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* How I think about it */}
-          <div className="grid md:grid-cols-3 gap-5 mt-10">
-            <div className="bg-peach/40 rounded-3xl p-7">
-              <div className="text-3xl mb-3">🎯</div>
-              <h3 className="font-serif text-xl mb-2">Boring where it counts</h3>
-              <p className="text-soft text-[15px] leading-relaxed">
-                Postgres, S3, Terraform, Spring Boot. Production foundations should be the most
-                proven part of the stack — leave the novelty for the leaves of the tree.
-              </p>
-            </div>
-            <div className="bg-sage/30 rounded-3xl p-7">
-              <div className="text-3xl mb-3">🧪</div>
-              <h3 className="font-serif text-xl mb-2">Sharp at the edge</h3>
-              <p className="text-soft text-[15px] leading-relaxed">
-                Agent frameworks, evaluation tooling, vector stores — that's where I spend
-                experimentation budget. The interface to enterprise should hide it.
-              </p>
-            </div>
-            <div className="bg-plum/15 rounded-3xl p-7">
-              <div className="text-3xl mb-3">🔭</div>
-              <h3 className="font-serif text-xl mb-2">Currently exploring</h3>
-              <p className="text-soft text-[15px] leading-relaxed">
-                Claude Managed Agents in production, A2A patterns across ADK and other
-                frameworks, and GCP Workload Identity Federation at multi-team scale.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
