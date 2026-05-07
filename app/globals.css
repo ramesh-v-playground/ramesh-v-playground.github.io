@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-feature-settings: 'kern', 'liga';
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .squiggle {
+    @apply text-coral italic relative inline-block;
+  }
+  .squiggle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6 Q 25 0, 50 6 T 100 6 T 150 6 T 200 6' stroke='%23ff7a59' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+      no-repeat center;
+    background-size: 100% 100%;
+  }
+}
