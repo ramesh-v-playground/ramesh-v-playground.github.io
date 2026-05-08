@@ -47,6 +47,7 @@ export const PROJECTS: Project[] = [
     oneLiner: 'Agentic control plane for governed cloud infrastructure — describe intent, get HCL, policy verdicts, and approval gates before anything applies.',
     status: 'experimenting',
     tags: ['agentic-ai', 'gcp', 'tool'],
+    liveUrl: 'https://www.monowall.ai/',
     shippedAt: '2026-05-01',
     emoji: '🧱',
     cardAccent: 'plum',
