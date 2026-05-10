@@ -73,6 +73,16 @@ export const PROJECTS: Project[] = [
     cardAccent: 'peach',
   },
   {
+    slug: 'meeting-assist',
+    name: 'Meeting Assist',
+    oneLiner: 'Fully local meeting overlay — Whisper transcribes, Ollama proposes questions, concerns, and full spoken answers in real time. No API keys, nothing leaves your laptop.',
+    status: 'experimenting',
+    tags: ['agentic-ai', 'tool', 'frontend'],
+    shippedAt: '2026-05-10',
+    emoji: '🏗️',
+    cardAccent: 'sage',
+  },
+  {
     slug: 'agent-observability',
     name: 'ADK Observability Agent',
     oneLiner: 'Six-agent Google ADK pipeline for Kubernetes — collector, orchestrator, and specialists (RCA, anomaly, capacity, remediation) producing plain-English root cause analysis that traditional APM tools can\'t.',
