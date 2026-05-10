@@ -63,6 +63,16 @@ export const PROJECTS: Project[] = [
     cardAccent: 'coral',
   },
   {
+    slug: 'stupidly',
+    name: 'Stupidly',
+    oneLiner: 'The home of certified stupidity — post your worst moments, the crowd jury votes if it ships, and chain dares back to your friends. Anonymous if you\'re shy.',
+    status: 'experimenting',
+    tags: ['frontend', 'tool'],
+    shippedAt: '2026-05-10',
+    emoji: '🫠',
+    cardAccent: 'peach',
+  },
+  {
     slug: 'agent-observability',
     name: 'ADK Observability Agent',
     oneLiner: 'Six-agent Google ADK pipeline for Kubernetes — collector, orchestrator, and specialists (RCA, anomaly, capacity, remediation) producing plain-English root cause analysis that traditional APM tools can\'t.',
