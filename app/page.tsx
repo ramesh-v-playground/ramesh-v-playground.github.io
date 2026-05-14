@@ -16,7 +16,7 @@ export default function Home() {
             Currently at Aetna (CVS Health) · Dallas, TX
           </div>
           <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl leading-[0.95] mb-6 tracking-tight">
-            Architecting the
+            Architecting the{' '}
             <br />
             <span className="squiggle">agentic</span> enterprise.
           </h1>
