@@ -61,7 +61,7 @@ export default function Home() {
           </div>
 
           {/* Narrative bio */}
-          <div className="bg-white rounded-3xl p-8 sm:p-12 mb-8 max-w-4xl mx-auto shadow-[0_2px_30px_rgba(0,0,0,0.04)]">
+          <div className="bg-white rounded-3xl p-8 sm:p-12 mb-8 max-w-3xl mx-auto shadow-[0_2px_30px_rgba(0,0,0,0.04)]">
             <p className="text-ink text-lg leading-[1.8] mb-5">
               I started in <strong className="font-semibold">telecom and networking</strong>, where systems either work or they take down a region — that's where I learned to respect the unglamorous foundations. From there: <strong className="font-semibold">supply chain</strong>, then <strong className="font-semibold">healthtech</strong>, then enterprise platforms across multiple verticals, and for the last several years deep in <strong className="font-semibold">health insurance</strong>.
             </p>
@@ -307,7 +307,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 sm:p-10 max-w-4xl mx-auto shadow-[0_2px_30px_rgba(0,0,0,0.04)]">
+          <div className="bg-white rounded-3xl p-8 sm:p-10 max-w-3xl mx-auto shadow-[0_2px_30px_rgba(0,0,0,0.04)]">
             <p className="font-serif text-xl mb-3 text-ink">A few cricket truths I keep coming back to:</p>
             <ul className="space-y-3 text-soft text-[1.05rem] leading-relaxed">
               <li className="flex gap-3">
