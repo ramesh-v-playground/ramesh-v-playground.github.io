@@ -15,7 +15,7 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-sage animate-blink" />
             Currently at Aetna (CVS Health) · Dallas, TX
           </div>
-          <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl leading-[0.95] mb-6 tracking-tight">
+          <h1 className="font-serif text-[clamp(3rem,5vw+1.5rem,6rem)] leading-[0.95] mb-6 tracking-tight">
             Architecting the{' '}
             <br />
             <span className="squiggle">agentic</span> enterprise.
