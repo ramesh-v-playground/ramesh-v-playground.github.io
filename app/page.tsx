@@ -15,7 +15,7 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-sage animate-blink" />
             Currently at Aetna (CVS Health) · Dallas, TX
           </div>
-          <h1 className="font-serif text-[clamp(3rem,5vw+1.5rem,6rem)] leading-[0.95] mb-6 tracking-tight">
+          <h1 className="font-serif text-[clamp(3rem,5vw+1.5rem,6rem)] leading-[0.95] mb-6 tracking-tight text-balance">
             Architecting the{' '}
             <br />
             <span className="squiggle">agentic</span> enterprise.
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">A little about me</p>
-            <h2 className="font-serif text-4xl sm:text-5xl mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-4 text-balance">
               Twenty years across <em className="text-coral italic">six</em> industries.
             </h2>
             <p className="text-soft max-w-2xl mx-auto">
@@ -137,7 +137,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">Currently driving</p>
-            <h2 className="font-serif text-4xl sm:text-5xl mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-4 text-balance">
               At Aetna · <em className="text-coral">CVS Health</em>
             </h2>
             <p className="text-soft max-w-2xl mx-auto">
@@ -190,7 +190,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">The stack</p>
-            <h2 className="font-serif text-4xl sm:text-5xl mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-4 text-balance">
               Tools I <em className="text-coral">reach for</em>
             </h2>
             <p className="text-soft max-w-2xl mx-auto">
@@ -246,7 +246,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">When I'm not in IDE</p>
-            <h2 className="font-serif text-4xl sm:text-5xl mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-4 text-balance">
               I play <em className="text-coral italic">cricket</em>. And watch a lot of it too.
             </h2>
             <p className="text-soft max-w-2xl mx-auto">
@@ -336,7 +336,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">From the blog</p>
-            <h2 className="font-serif text-4xl sm:text-5xl mb-4">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-4 text-balance">
               Thinking out <em className="text-coral">loud</em>
             </h2>
             <p className="text-soft">
@@ -375,7 +375,7 @@ export default function Home() {
           <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-coral/20" />
           <div className="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-sage/20" />
           <div className="relative">
-            <h2 className="font-serif text-4xl sm:text-5xl mb-4 leading-tight">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-4 leading-tight text-balance">
               Helping enterprises unlock <span className="text-coral">agentic AI</span>.
             </h2>
             <p className="opacity-85 mb-8 max-w-xl mx-auto leading-relaxed">

@@ -54,7 +54,7 @@ export function PlaygroundSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-coral-text font-semibold text-sm uppercase tracking-widest mb-3">The playground</p>
-          <h2 className="font-serif text-4xl sm:text-5xl mb-4">
+          <h2 className="font-serif text-4xl sm:text-5xl mb-4 text-balance">
             Things I'm <em className="text-coral italic">building</em> in public.
           </h2>
           <p className="text-soft max-w-2xl mx-auto">
