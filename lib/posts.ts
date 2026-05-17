@@ -11,6 +11,40 @@ const SOURCE = 'https://cloud.google.com/blog/products/data-analytics/whats-new-
 
 export const POSTS: Post[] = [
   {
+    slug: 'managed-airflow-feature-wave-2026',
+    title: 'Managed Airflow grows up: 3.1 GA, agentic troubleshooting at the DAG level',
+    excerpt:
+      "The January preview of Gemini Cloud Assist in Cloud Composer was the appetizer. May's feature wave is the meal — Airflow 3.1 GA with a real architectural reset underneath.",
+    date: '2026-05-04',
+    source: SOURCE,
+    body: `Google shipped a wave of Managed Service for Apache Airflow updates: Airflow 3.1 GA, agentic troubleshooting embedded in the dashboard, and the structural changes underneath that make both serious for enterprise workloads.
+
+The architectural reset in 3.1 is the part operators should care about first. Scheduler and execution layer are now decoupled, DAG versioning is native (with historical structure and run history retained per version), backfills are a first-class scheduler concept instead of a sidecar, and event-driven scheduling can trigger workflows from data assets and external queues. These are the things teams hand-rolled around Airflow for years.
+
+Then there's Human-in-the-Loop — pause execution for a human decision via the UI with deadline alerts on critical pipelines. That's the missing primitive for any pipeline that touches regulated data movement, model promotion, or anything else where you want a person to nod before the next task runs.
+
+On the assistance side: the January preview shipped as task-level root cause analysis. The May update elevates it to DAG execution level — troubleshooting holistically across the run, not just the failed task. That's the move from "what's wrong with this task" to "what's wrong with this pipeline," which is the question operators actually ask at 3am.
+
+Platform teams running Airflow at scale: stop building scaffolding around backfills and DAG versioning. The platform finally absorbed the patterns you've been maintaining.`,
+  },
+  {
+    slug: 'managed-airflow-mcp-yaml-orchestration',
+    title: 'Managed Airflow gets an MCP server and YAML pipelines — orchestration goes agent-first',
+    excerpt:
+      'Two changes in the May feature wave matter for the next decade of pipeline work: a managed Airflow MCP server, and declarative YAML pipelines that no longer require Python expertise.',
+    date: '2026-05-04',
+    source: SOURCE,
+    body: `Buried in the May Managed Airflow feature wave are two changes that reshape who can author and who can operate orchestration. A managed Airflow MCP Server lands in public preview, and a declarative YAML pipeline format lets non-Python users author end-to-end orchestration including cross-product dependencies (dbt, Spark, DTS).
+
+The MCP server is the obvious through-line from the database-tier MCP rollout in February. Google operationalized MCP across AlloyDB, Spanner, Cloud SQL, Bigtable, Firestore three months ago; now it reaches the orchestration tier. Tools surface like list_environments, get_dag_run, get_task_instance — exactly the primitives an agent needs to reason about a running pipeline without being co-located with the operator UI. Same protocol, same governance story, same "you don't run the server yourself" win.
+
+The YAML format is the more controversial change. Defining DAGs in Python has been Airflow's strength (full programmatic power) and its weakness (you need a Python developer to author one). Declarative YAML moves authoring into reach of data analysts, dbt practitioners, and anyone who's been blocked by "we need an engineer to add this pipeline."
+
+The right read: the YAML layer isn't replacing Python DAGs — it's a lower-barrier on-ramp that compiles into the same execution model. Power users keep Python; the long tail of "I just need to schedule three steps with a dependency" gets unblocked. That's the same pattern Looker pulled with self-service Explores for analytics — governed core, exploratory edge.
+
+For enterprise data platform teams: this is the moment to stop being the bottleneck on pipeline authoring. Expose the YAML format and the MCP server to your domain teams. Keep Python for the things that earn it.`,
+  },
+  {
     slug: 'bigquery-odbc-driver-preview',
     title: "BigQuery's first-party ODBC driver is the unsexy enterprise win of 2026",
     excerpt:
