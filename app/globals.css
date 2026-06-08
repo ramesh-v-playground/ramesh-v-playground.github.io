@@ -8,7 +8,22 @@
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-padding-top: 5.5rem;
+  }
+  :focus-visible {
+    outline: 2px solid #ff7a59;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -26,5 +41,30 @@
     background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6 Q 25 0, 50 6 T 100 6 T 150 6 T 200 6' stroke='%23ff7a59' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
       no-repeat center;
     background-size: 100% 100%;
+  }
+
+  .mode-fade {
+    animation: modeFade 320ms ease-out both;
+  }
+
+  .drop-cap::first-letter {
+    font-family: 'DM Serif Display', serif;
+    float: left;
+    font-size: 3.6rem;
+    line-height: 0.9;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    color: #ff7a59;
+  }
+}
+
+@keyframes modeFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -43,8 +43,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-cream text-ink font-sans antialiased relative overflow-x-hidden">
         {/* Floating gradient orbs — soft enough to never reduce text contrast */}
-        <div className="pointer-events-none fixed -top-52 -right-52 w-[500px] h-[500px] rounded-full bg-peach/40 blur-3xl animate-float1 z-0" />
-        <div className="pointer-events-none fixed -bottom-72 -left-52 w-[600px] h-[600px] rounded-full bg-sage/30 blur-3xl animate-float2 z-0" />
+        <div className="pointer-events-none fixed -top-52 -right-52 w-[500px] h-[500px] rounded-full bg-peach/40 blur-3xl motion-safe:animate-float1 z-0" />
+        <div className="pointer-events-none fixed -bottom-72 -left-52 w-[600px] h-[600px] rounded-full bg-sage/30 blur-3xl motion-safe:animate-float2 z-0" />
         <div className="relative z-10">{children}</div>
       </body>
     </html>

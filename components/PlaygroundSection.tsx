@@ -109,8 +109,8 @@ function ProjectCard({ project: p }: { project: Project }) {
   return (
     <Wrapper
       {...wrapperProps}
-      className={`block bg-white rounded-3xl p-6 relative overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.03)] transition ${
-        isClickable ? 'hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] cursor-pointer' : ''
+      className={`block bg-white rounded-3xl p-6 relative overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] ${
+        isClickable ? 'cursor-pointer' : 'cursor-default'
       }`}
     >
       <div className={`absolute -top-16 -right-16 w-40 h-40 rounded-full ${accentBg}`} />

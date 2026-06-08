@@ -243,3 +243,8 @@ export function formatPostDate(iso: string): { day: string; mon: string } {
   const mon = d.toLocaleDateString('en-US', { month: 'short' });
   return { day, mon };
 }
+
+export function readingTime(body: string): number {
+  const words = body.trim().split(/\s+/).length;
+  return Math.max(1, Math.round(words / 220));
+}
